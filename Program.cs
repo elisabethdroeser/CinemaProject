@@ -39,7 +39,7 @@ namespace CinemaProject
 
         private static void UserInput()
         {
-            //Different actions for the user to perform on menu
+            //Different actions for the user to choose from on menu
             var input = ui.GetStringInput();
             switch (input)
             {
@@ -78,15 +78,15 @@ namespace CinemaProject
 
             if (age <=18)
             {
-                Console.WriteLine("You are a youth and your price is 80 SEK.\n");
+                Console.WriteLine("You are a youth, your ticketprice is 80 SEK.\n");
             } 
             else if (age <= 64)
             {
-                Console.WriteLine("You are an adult and your price is 120 kr\n");
+                Console.WriteLine("You are an adult, your ticketprice is 120 kr\n");
             }
             else if (age >= 64)
             {
-                Console.WriteLine("You are a senior citizen and your price is 90 kr\n");
+                Console.WriteLine("You are a senior citizen, your ticketprice is 90 kr\n");
             }
         }
 
