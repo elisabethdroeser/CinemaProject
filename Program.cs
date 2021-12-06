@@ -32,7 +32,7 @@ namespace CinemaProject
             //Ask the user to choose an option
             ui.PrintString("0 - Exit");
             ui.PrintString("1 - Customer");
-            ui.PrintString("2 - Choose tickets");
+            ui.PrintString("2 - Buy tickets");
             ui.PrintString("3 - Repeat ten times");
             ui.PrintString("4 - The third word");
         }
@@ -51,7 +51,7 @@ namespace CinemaProject
                     ChooseCustomer();
                     break;
                 case "2":
-                    ChooseTickets();
+                    BuyTicket();
                     break;
                 case "3":
                     RepeatInput();
@@ -65,9 +65,9 @@ namespace CinemaProject
             }
         }
 
-        private static void ChooseTickets()
+        private static void BuyTicket()
         {
-            throw new NotImplementedException();
+            if ((age <= 18 && ticket)
         }
 
         private static void ChooseCustomer()
@@ -75,18 +75,21 @@ namespace CinemaProject
             //Method to show customer type 
             Console.WriteLine("Please enter your age");
             var age = int.Parse(Console.ReadLine());
+            int ticketA = 80;
+            int ticketB = 120;
+            int ticketC = 90;
 
-            if (age <=18)
+            if (age <= 18)
             {
-                Console.WriteLine("You are a youth, your ticketprice is 80 SEK.\n");
-            } 
+                Console.WriteLine($"You are a youth, your ticketprice is {ticketA} SEK.\n");
+            }
             else if (age <= 64)
             {
-                Console.WriteLine("You are an adult, your ticketprice is 120 kr\n");
+                Console.WriteLine($"You are an adult, your ticketprice is {ticketB} kr\n");
             }
             else if (age >= 64)
             {
-                Console.WriteLine("You are a senior citizen, your ticketprice is 90 kr\n");
+                Console.WriteLine($"You are a senior citizen, your ticketprice is {ticketC} kr\n");
             }
         }
 
