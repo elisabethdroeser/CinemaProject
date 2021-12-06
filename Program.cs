@@ -7,6 +7,13 @@ namespace CinemaProject
         static ConsoleUI ui = new ConsoleUI();
         static void Main(string[] args)
         {
+            //Inevitable iteration. Exit by using CTRL+C
+            /*int i = 0;
+            while (i < 10)
+            {
+                Console.WriteLine(i);
+            }*/
+
             //Display text on header
             Console.WriteLine("-------Cinema Le Xicon------");
             Console.WriteLine("You have reached our menu");
@@ -17,6 +24,7 @@ namespace CinemaProject
                 ShowMainMenu();
                 UserInput();
             } while (true);
+            
         }
 
         private static void ShowMainMenu()
@@ -53,6 +61,24 @@ namespace CinemaProject
             }
         }
 
+        private static void ChooseCustomer()
+        {
+            Console.WriteLine("Please enter your age!");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age >= 5 && age <=18)
+            {
+                Console.WriteLine("You are a youth");
+            } 
+            else if (age <= 64)
+            {
+                Console.WriteLine("You are an adult");
+            }
+            else if (age >= 64)
+            {
+                Console.WriteLine("You are a senior citizen");
+            }
+        }
         private static void ChooseThirdWord()
         {
             throw new NotImplementedException();
@@ -63,9 +89,6 @@ namespace CinemaProject
             throw new NotImplementedException();
         }
 
-        private static void ChooseCustomer()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
