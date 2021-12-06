@@ -32,8 +32,9 @@ namespace CinemaProject
             //Ask the user to choose an option
             ui.PrintString("0 - Exit");
             ui.PrintString("1 - Customer");
-            ui.PrintString("2 - Repeat ten times");
-            ui.PrintString("3 - The third word");
+            ui.PrintString("2 - Choose tickets");
+            ui.PrintString("3 - Repeat ten times");
+            ui.PrintString("4 - The third word");
         }
 
         private static void UserInput()
@@ -50,9 +51,12 @@ namespace CinemaProject
                     ChooseCustomer();
                     break;
                 case "2":
-                    RepeatInput();
+                    ChooseTickets();
                     break;
                 case "3":
+                    RepeatInput();
+                    break;
+                case "4":
                     ChooseThirdWord();
                     break;
                 default:
@@ -61,24 +65,31 @@ namespace CinemaProject
             }
         }
 
+        private static void ChooseTickets()
+        {
+            throw new NotImplementedException();
+        }
+
         private static void ChooseCustomer()
         {
-            Console.WriteLine("Please enter your age!");
-            int age = int.Parse(Console.ReadLine());
+            //Method to show customer type 
+            Console.WriteLine("Please enter your age");
+            var age = int.Parse(Console.ReadLine());
 
-            if (age >= 5 && age <=18)
+            if (age <=18)
             {
-                Console.WriteLine("You are a youth");
+                Console.WriteLine("You are a youth and your price is 80 SEK.\n");
             } 
             else if (age <= 64)
             {
-                Console.WriteLine("You are an adult");
+                Console.WriteLine("You are an adult and your price is 120 kr\n");
             }
             else if (age >= 64)
             {
-                Console.WriteLine("You are a senior citizen");
+                Console.WriteLine("You are a senior citizen and your price is 90 kr\n");
             }
         }
+
         private static void ChooseThirdWord()
         {
             throw new NotImplementedException();
