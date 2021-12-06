@@ -2,7 +2,7 @@
 
 namespace CinemaProject
 {
-    public class ConsoleUI : IUI
+    public class ConsoleUI //: IUI
     {
         public string GetStringInput()
         {
@@ -14,7 +14,7 @@ namespace CinemaProject
         }
     }
 
-    public class MockUI : IUI
+    /*public class MockUI : IUI
     {
         public string GetStringInput()
         {
@@ -25,5 +25,5 @@ namespace CinemaProject
         {
 
         }
-    }
+    }*/
 }
